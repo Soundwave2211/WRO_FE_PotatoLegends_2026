@@ -1,4 +1,3 @@
-# WRO Future Engineers 2026
 Autonomous Ackermann steering vehicle.
 
 Current status:

@@ -1,5 +1,3 @@
-# Engineering Journal
-## 2026-06-13
 Created project structure.
 
 Planned architecture:
