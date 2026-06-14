@@ -41,15 +41,3 @@ class AckermannCar:
         self.state.theta = theta
         self.state.v = 0
         self.state.steer = 0
-
-if __name__ == "__main__":
-    car = AckermannCar()
-    car.set_speed(0.5)
-    car.set_steering(15)
-    dt = 0.02
-
-    for i in range(500):
-        car.update(dt)
-        if i % 50 == 0:
-            x, y, theta = car.pose()
-            print(round(x, 3), round(y, 3), round(math.degrees(theta), 2))
