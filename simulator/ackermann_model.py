@@ -3,11 +3,11 @@ import math
 
 @dataclass
 class RobotState:
-    x: float = 0
-    y: float = 0
-    theta: float = 0
-    v: float = 0
-    steer: float = 0
+    x: float = 0.0
+    y: float = 0.0
+    theta: float = 0.0
+    v: float = 0.0
+    steer: float = 0.0
 
 class AckermannCar:
     def __init__(self, wheelbase=0.18, max_steer_deg=28, max_speed=1.0):
@@ -35,9 +35,11 @@ class AckermannCar:
     def pose(self):
         return self.state.x, self.state.y, self.state.theta
 
-    def reset(self, x=0, y=0, theta=0):
-        self.state.x = x
-        self.state.y = y
-        self.state.theta = theta
-        self.state.v = 0
-        self.state.steer = 0
+    def speed(self):
+        return self.state.v
+
+    def steering_deg(self):
+        return math.degrees(self.state.steer)
+
+    def reset(self, x=0.0, y=0.0, theta=0.0):
+        self.state = RobotState(x=x, y=y, theta=theta)

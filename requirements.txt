@@ -1,6 +1,6 @@
-pygame
 numpy
-opencv-python
 ultralytics
+pygame
+opencv-python
 pyyaml
 pytest
